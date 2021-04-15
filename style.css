@@ -1,0 +1,192 @@
+body
+{background-color: rgb(61, 193, 197);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+
+.navbar{
+    width:100%;
+} 
+
+.jumbotron{
+    background-color: #dfdfdf;
+}
+
+.container{
+    /*background-color: #dddcdc;*/
+    /*min-height: calc(100vh - 64px);*/ 
+    align-items: center;
+}
+
+.container h1{
+    padding-top: 5rem;
+    text-align: center;
+}
+
+.jumbotron li{
+    text-align: left;
+}
+
+.hide{
+    display: none;
+}
+
+
+
+/*ComQuestion CSS*/
+
+#questionRow{
+    margin-top: 60px;
+    text-align: center;
+    justify-content: center;
+}
+
+#choiceRow{
+    text-align: center;
+    justify-content: center;
+}
+
+#signRow{
+    margin-top: 80px;
+    text-align: center;
+    justify-content: center;
+}
+
+#answerRow{
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+}
+/*synQuestion CSS*/
+#synQuestionRow{
+    margin-top: 60px;
+    text-align: center;
+    justify-content: center;
+}
+
+#synChoiceRow{
+    text-align: center;
+    justify-content: center;
+}
+
+#synSignRow{
+    margin-top: 80px;
+    text-align: center;
+    justify-content: center;
+}
+
+#synAnswerRow{
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+/*longQuestion CSS*/
+#longQuestionRow{
+    margin-top: 60px;
+    text-align: center;
+    justify-content: center;
+}
+
+#longChoiceRow{
+    text-align: center;
+    justify-content: center;
+}
+
+#longSignRow{
+    margin-top: 80px;
+    text-align: center;
+    justify-content: center;
+}
+
+#longAnswerRow{
+    margin-top: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+/*Final page css*/
+
+#allDoneRow{
+    margin-top: 60px;
+    text-align: center;
+    justify-content: center;
+}
+
+#finalScoreRow{
+    text-align: center;
+    justify-content: center;
+
+}
+
+#initialsRow{
+    margin-top: 30px;
+    text-align: center;
+    justify-content: center;
+
+}
+
+#submitRow{
+    text-align: center;
+    justify-content: center;
+
+}
+#resetRow{
+    text-align: center;
+    justify-content: center;
+
+}
+
+
+.footer > .container{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+#footer-images ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none
+  }
+
+.pull-left img{
+    padding-top: 5px;
+    padding-right: 15px;
+    max-width: 35px;
+    height: auto;
+}
+
+.pull-center img{
+    padding-top: 5px;
+    padding-right: 20px;
+    max-width: 35px;
+    height: auto;
+}
+
+.pull-right img{
+    padding-top: 5px;
+    padding-right: 15px;
+    max-width: 35px;
+    height: auto;
+}
+
+@media (max-width: 510px) {
+    .modal-lg {
+    max-width: 50vw;
+    left:25vw;
+  }
+}
+@media (min-width: 768px) {
+     .modal-lg {
+      width: 50%;
+
+     }
+
+  }
+@media (min-width: 992px) {
+    .modal-lg {
+      width: 50%;
+    }
+  }

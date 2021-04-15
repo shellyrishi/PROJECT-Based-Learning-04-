@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Code Quiz Challenge</title>
+         <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--Bootstrap Javascript-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--JQuery Library-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"crossorigin="anonymous"></script>
+    <!--Custom CSS and Javascript-->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <audio id="wrongSound">
+        <source src="Assets/WrongSound.mp3" type="audio/mpeg">
+    </audio> 
+    <audio id="rightSound">
+        <source src="Assets/RightSound.mp3" type="audio/mpeg">
+    </audio>       
+        <!--The sound effect is permitted for commercial use under license Creative Commons Attribution 4.0 International License”-->
+        <!--https://creativecommons.org/licenses/by/4.0/-->
+    
+
+    </head>
+    
+    <body>
+        <main class="container pt-3 text-center">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="btn btn-link" id="scoreBoard" data-toggle="modal" data-target="#scoreCenter">Scoreboard</div>
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <div id="timer"></div>
+                    </li>
+                  </ul>
+            </nav>
+
+            <h1 style="color: gold;"> FM GAME 
+            </h1>
+            <!--start menu-->
+            <div id="instruction">
+                <section class="jumbotron">
+                <p>Try to answer the following FREQUENCY MODULATION-related questions within the time limit.</p>
+                <p>Keep in mind the following:</p>
+                <ul>
+                    <li>Total time 75 seconds</li>
+                    <li>Correct answers will increase your score by 10!</li>
+                    <li>Incorrect answers will penalize your score time by 10 seconds and 5 points from your score!</li>
+                    <li>Extra 10 points will be rewarded if remaining time is more than or equal to 50 seconds.</li>
+                    <li>Extra 5 points will be rewarded if remaining time is more than or equal to 40 seconds.</li>
+                </ul>
+                <p>Good luck!</p>
+                </section>
+                <button type="button" onclick="start()" class="btn btn-success">Start Quiz</button>
+            </div>  
+            <!--option menu-->
+            <div id = "quizOption" class = "hide">
+                <section class="jumbotron">
+                <p>Please select the type of questions you would like to challenge.</p>
+                </section>
+                <br>
+                <button type="button" id="comQuest" onclick="displayCommonQuestions()" class="btn btn-success">LEVEL 1</button>
+                <button type="button" id="synQuest" onclick="displaySyntaxQuestions()" class="btn btn-success">LEVEL 2</button>
+                <button type="button" id="longQuest" onclick="displayLongQuestions()" class="btn btn-success">LEVEL 3</button>
+            </div>
+
+            <!--common questions-->
+            <div class="container" id="commonQuestions">
+                <div class="row" id="questionRow">
+                    <div id="title"></div>
+                </div>
+                <div class="row" id="choiceRow">
+                    <div id="choices"></div>
+                </div>
+                <div class="row" id="signRow">
+                    <div id="sign"></div>
+                </div>
+                <div class="row" id="answerRow">
+                    <div id="answer"></div>
+                </div>
+            </div>
+            
+            <!--syntax questions-->
+            <div class="container" id="synQuestions">
+                <div class="row" id="synQuestionRow">
+                    <div id="synTitle"></div>
+                </div>
+                <div class="row" id="synChoiceRow">
+                    <div id="synChoices"></div>
+                </div>
+                <div class="row" id="synSignRow">
+                    <div id="synSign"></div>
+                </div>
+                <div class="row" id="synAnswerRow">
+                    <div id="synAnswer"></div>
+                </div>
+            </div>
+
+            <!--long question-->
+            <div class="container" id="longQuestions">
+                <div class="row" id="longQuestionRow">
+                    <div id="longTitle"></div>
+                </div>
+                <div class="row" id="longChoiceRow">
+                    <div id="longChoices"></div>
+                </div>
+                <div class="row" id="longSignRow">
+                    <div id="longSign"></div>
+                </div>
+                <div class="row" id="longAnswerRow">
+                    <div id="longAnswer"></div>
+                </div>
+            </div>
+
+                <!--All done msg-->
+           
+                <div class="row" id="allDoneRow">
+                    <div id="completeMsg"></div>
+                </div>
+                <div class="row" id="finalScoreRow">
+                    <div id="finalScore"></div>
+                </div>
+                <div class="row" id="initialsRow">
+                    <div id="initials"></div>
+                </div>
+                <div class="row" id="submitRow">
+                    <div id="submitButton"></div>
+                </div>
+                <div class="row" id="resetRow">
+                    <div id="resetButton"></div>
+                </div>
+                <br>
+          
+
+            <div class="modal fade" id="scoreCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Scoreboard</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                        <h6>Highscores</h6>
+                        <div class="modal-body1" id="previousUser"></div>
+                        <div id="nameList"></div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" onclick="clearData()" class="btn btn-primary">Clear Highscores</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              
+   
+
+           
+
+            
+        </main>
+        
+
+    </body>
+</html>
