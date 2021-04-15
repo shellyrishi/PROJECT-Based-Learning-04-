@@ -1,4 +1,4 @@
-# CodingQuizChallenge
+# THE FM GAME
 
 # Objective
 The objective of this game is to provide a little Javascript quiz game.
