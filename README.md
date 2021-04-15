@@ -1,7 +1,7 @@
 # THE FM GAME
 
 # Objective
-The objective of this game is to provide a little Javascript quiz game.
+The objective of this game is to provide a little FREQUENCY MODULATION quiz game.
 The rules of this game are:
 1. Total time: 75 seconds
 2. 3 question banks, 2 banks have 4 questions and 1 bank has 5.
