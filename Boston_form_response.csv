@@ -1,0 +1,40 @@
+City,Avg_Temperature,public_opinion,clothing,frequency_illness,heater_req,gas_electricity_usage
+Boston,61,warm,t-shirt,normal,no,low
+Boston,61,moderate,full-sleeves,feverish,yes,low
+Boston,54.1,moderate,full-sleeves,normal,no,low
+Boston,33.7,cold,jackets,extreme cough and cold,yes,high
+Boston,66.2,warm,t-shirt,normal,no,low
+Boston,69.9,warm,t-shirt,normal,no,low
+Boston,67.4,warm,t-shirt,extreme cough and cold,yes,low
+Boston,48.8,moderate,full-sleeves,extreme cough and cold,yes,high
+Boston,43,cold,jackets,normal,yes,high
+Boston,56.4,moderate,full-sleeves,extreme cough and cold,yes,high
+Boston,66.2,warm,t-shirt,normal,no,low
+Boston,41,cold,jackets,extreme cough and cold,yes,high
+Boston,50.3,warm,t-shirt,normal,no,low
+Boston,39.5,cold,jackets,extreme cough and cold,yes,high
+Boston,38.2,cold,jackets,extreme cough and cold,yes,high
+Boston,46.9,moderate,full-sleeves,extreme cough and cold,yes,high
+Boston,41,cold,jackets,feverish,yes,low
+Boston,38.5,cold,jackets,extreme cough and cold,yes,high
+Boston,38.5,moderate,full-sleeves,feverish,no,low
+Boston,33.7,cold,jackets,extreme cough and cold,yes,high
+Boston,33.4,cold,jackets,extreme cough and cold,yes,high
+Boston,33.4,moderate,full-sleeves,feverish,no,low
+Boston,44.1,cold,jackets,extreme cough and cold,no,high
+Boston,39.5,cold,jackets,extreme cough and cold,yes,high
+Boston,47.2,moderate,full-sleeves,feverish,yes,low
+Boston,46.1,moderate,full-sleeves,feverish,no,low
+Boston,50,moderate,full-sleeves,feverish,yes,low
+Boston,49,moderate,full-sleeves,feverish,no,high
+Boston,38.6,cold,jackets,extreme cough and cold,yes,high
+Boston,50.4,moderate,full-sleeves,feverish,no,low
+Boston,44.1,cold,jackets,extreme cough and cold,yes,high
+Boston,33.7,cold,jackets,extreme cough and cold,yes,high
+Boston,46.9,moderate,full-sleeves,feverish,no,low
+Boston,38.5,cold,jackets,extreme cough and cold,yes,high
+Boston,33.7,cold,jackets,extreme cough and cold,yes,high
+Boston,41,moderate,full-sleeves,feverish,no,low
+Boston,50.3,moderate,full-sleeves,extreme cough and cold,no,high
+Boston,67.4,warm,t-shirt,feverish,yes,low
+Boston,69.9,warm,t-shirt,normal,no,low
